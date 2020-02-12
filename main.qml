@@ -115,6 +115,24 @@ Window {
                         text = ((repeaterDemo.visible) ? "Hide" : "Show") + " Repeater Demo"
                     }
                 }
+
+                Button {
+                    id: showTextInputDemo
+                    text: "Show TextInput Demo"
+                    onClicked: {
+                        textInputDemo.visible = !textInputDemo.visible
+                        text = ((textInputDemo.visible) ? "Hide" : "Show") + " TextInput Demo"
+                    }
+                }
+
+                Button {
+                    id: showKeyPressDemo
+                    text: "Show KeyPress Demo"
+                    onClicked: {
+                        keyPressDemo.visible = !keyPressDemo.visible
+                        text = ((keyPressDemo.visible) ? "Hide" : "Show") + " KeyPress Demo"
+                    }
+                }
             }
 
         }
@@ -163,6 +181,18 @@ Window {
 
             RepeaterDemo {
                 id: repeaterDemo
+                anchors.fill: parent
+                visible: false
+            }
+
+            TextInputDemo {
+                id: textInputDemo
+                anchors.fill: parent
+                visible: false
+            }
+
+            KeysPressDemo {
+                id: keyPressDemo
                 anchors.fill: parent
                 visible: false
             }

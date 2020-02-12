@@ -23,5 +23,7 @@
         <file>BlueSquare.qml</file>
         <file>GreenSquare.qml</file>
         <file>ColumnDemo.qml</file>
+        <file>RowDemo.qml</file>
+        <file>RepeaterDemo.qml</file>
     </qresource>
 </RCC>

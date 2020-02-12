@@ -25,5 +25,7 @@
         <file>ColumnDemo.qml</file>
         <file>RowDemo.qml</file>
         <file>RepeaterDemo.qml</file>
+        <file>TextInputDemo.qml</file>
+        <file>KeysPressDemo.qml</file>
     </qresource>
 </RCC>

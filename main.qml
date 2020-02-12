@@ -27,7 +27,7 @@ Window {
 
 
         Item {
-
+            // I NEED A MODEL TO ALLOW ONLY ONE VISIBLE!
 
             id: controls
             x: 0; y: 0
@@ -45,58 +45,75 @@ Window {
                 return y * (height + buttonMargin) + 12
             }
 
-            Button {
-                id: showButtonDemo
-                x: 0 * (width + 3) + 12
-                y: 0 * (height + 3) + 12
-                text: "Show Button Demo"
-                onClicked: {
-                    buttonContainer.visible = !buttonContainer.visible
-                    text = ((buttonContainer.visible) ? "Hide" : "Show") + " Button Demo"
-                }
-            }
+            Flow {
+                id: grid
+                anchors.fill: parent
 
-            Button {
-                id: showTextDemo
-                x: 1 * (width + 3) + 12
-                y: 0 * (height + 3) + 12
-                text: "Show Text Demo"
-                onClicked: {
-                    textDemo.visible = !textDemo.visible
-                    text = ((textDemo.visible) ? "Hide" : "Show") + " Text Demo"
-                }
-            }
+                anchors.margins: 10
+                spacing: 5
 
-            Button {
-                id: showRectangleDemo
-                x: 2 * (width + 3) + 12
-                y: 0 * (height + 3) + 12
-                text: "Show Rectangle Demo"
-                onClicked: {
-                    rectangleDemo.visible = !rectangleDemo.visible
-                    text = ((rectangleDemo.visible) ? "Hide" : "Show") + " Rectangle Demo"
-                }
-            }
 
-            Button {
-                id: showTransformDemo
-                x: 0 * (width + 3) + 12
-                y: 1 * (height + 3) + 12
-                text: "Show Transform Demo"
-                onClicked: {
-                    transformationDemo.visible = !transformationDemo.visible
-                    text = ((transformationDemo.visible) ? "Hide" : "Show") + " Transform Demo"
+                Button {
+                    id: showButtonDemo
+                    text: "Show Button Demo"
+                    onClicked: {
+                        buttonContainer.visible = !buttonContainer.visible
+                        text = ((buttonContainer.visible) ? "Hide" : "Show") + " Button Demo"
+                    }
                 }
-            }
 
-            Button {
-                id: showColumnDemo
-                x: 2 * (width + 3) + 12
-                y: 1 * (height + 3) + 12
-                text: "Show Column Demo"
-                onClicked: {
-                    columnDemo.visible = !columnDemo.visible
-                    text = ((columnDemo.visible) ? "Hide" : "Show") + " Column Demo"
+                Button {
+                    id: showTextDemo
+                    text: "Show Text Demo"
+                    onClicked: {
+                        textDemo.visible = !textDemo.visible
+                        text = ((textDemo.visible) ? "Hide" : "Show") + " Text Demo"
+                    }
+                }
+
+                Button {
+                    id: showRectangleDemo
+                    text: "Show Rectangle Demo"
+                    onClicked: {
+                        rectangleDemo.visible = !rectangleDemo.visible
+                        text = ((rectangleDemo.visible) ? "Hide" : "Show") + " Rectangle Demo"
+                    }
+                }
+
+                Button {
+                    id: showTransformDemo
+                    text: "Show Transform Demo"
+                    onClicked: {
+                        transformationDemo.visible = !transformationDemo.visible
+                        text = ((transformationDemo.visible) ? "Hide" : "Show") + " Transform Demo"
+                    }
+                }
+
+                Button {
+                    id: showColumnDemo
+                    text: "Show Column Demo"
+                    onClicked: {
+                        columnDemo.visible = !columnDemo.visible
+                        text = ((columnDemo.visible) ? "Hide" : "Show") + " Column Demo"
+                    }
+                }
+
+                Button {
+                    id: showRowDemo
+                    text: "Show Row Demo"
+                    onClicked: {
+                        rowDemo.visible = !rowDemo.visible
+                        text = ((rowDemo.visible) ? "Hide" : "Show") + " Row Demo"
+                    }
+                }
+
+                Button {
+                    id: showRepeaterDemo
+                    text: "Show Repeater Demo"
+                    onClicked: {
+                        repeaterDemo.visible = !repeaterDemo.visible
+                        text = ((repeaterDemo.visible) ? "Hide" : "Show") + " Repeater Demo"
+                    }
                 }
             }
 
@@ -134,6 +151,18 @@ Window {
 
             ColumnDemo {
                 id: columnDemo
+                anchors.fill: parent
+                visible: false
+            }
+
+            RowDemo {
+                id: rowDemo
+                anchors.fill: parent
+                visible: false
+            }
+
+            RepeaterDemo {
+                id: repeaterDemo
                 anchors.fill: parent
                 visible: false
             }
